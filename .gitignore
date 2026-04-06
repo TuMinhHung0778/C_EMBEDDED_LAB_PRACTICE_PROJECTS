@@ -1,0 +1,30 @@
+## Build outputs
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dylib
+*.dll
+*.exe
+*.out
+*.elf
+*.map
+*.hex
+*.bin
+
+## Debug / profiler artifacts
+*.pdb
+*.dSYM/
+
+## OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+## Logs
+*.log
+
+## Local-only
+.env
