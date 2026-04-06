@@ -32,6 +32,7 @@ gcc -Wall -Wextra -std=c11 -O2 uart-ringbuffer/ringbuffer.c uart-ringbuffer/pars
 ```
 
 Notes:
+
 - `-lm` links the math library (needed for `sqrt()` in Project 1 on some platforms).
 - On Windows, binaries are typically `*.exe`.
 
@@ -63,7 +64,7 @@ A **cooperative (non-preemptive)** scheduler running on a simulated 1 ms tick, m
 ### Task set (from spec)
 
 | Task | Period | Relative deadline |
-|------|--------|-------------------|
+| ---- | ------ | ----------------- |
 | A    | 10 ms  | 5 ms              |
 | B    | 25 ms  | 12 ms             |
 | C    | 50 ms  | 25 ms             |
@@ -152,9 +153,3 @@ Recovery success: 100%
 ```
 
 More details: `embedded-simulators/uart-ringbuffer/README.md`
-
-## CV-ready bullets (copy/paste)
-
-- Built a cooperative scheduler simulator (1 ms tick) with deadline detection and jitter analysis; achieved **100% deadline compliance** over a 10 s run (1600 total task executions).
-- Implemented a UART RX ring buffer with overflow-safe drop policy; validated behavior under stress (**200-byte burst into 128-byte buffer**, 72 bytes dropped as expected).
-- Developed an AT-like command parser using a finite-state-machine (FSM); demonstrated **graceful recovery** from malformed input with clear event logs and reliability metrics.
